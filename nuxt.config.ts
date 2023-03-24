@@ -4,7 +4,7 @@ export default defineNuxtConfig({
     preset: "vercel-edge",
     prerender: {
       crawlLinks: true,
-      routes: ["/prerender/1"],
+      routes: ["/prerender"],
     },
   },
   modules: ["@pinia/nuxt"],
