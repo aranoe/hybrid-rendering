@@ -2,6 +2,10 @@
 export default defineNuxtConfig({
   nitro: {
     preset: "vercel-edge",
+    prerender: {
+      crawlLinks: true,
+      routes: ["/prerender/1"],
+    },
   },
   modules: ["@pinia/nuxt"],
   routeRules: {
