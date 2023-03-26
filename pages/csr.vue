@@ -1,4 +1,4 @@
 <template>
   <div>CSR</div>
-  <div>{{ new Date().toLocaleString() }}</div>
+  <FetchedContent />
 </template>

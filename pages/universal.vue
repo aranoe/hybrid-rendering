@@ -1,4 +1,4 @@
 <template>
-  <div>Universal test change</div>
-  <div>{{ new Date().toLocaleString() }}</div>
+  <div>Universal</div>
+  <FetchedContent />
 </template>
