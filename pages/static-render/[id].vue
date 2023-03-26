@@ -1,8 +1,10 @@
 <template>
-  <div>Prerendered Id: {{ $route.params.id }}</div>
+  <div>Static Render Id: {{ $route.params.id }}</div>
   <div v-if="!pending && time">{{ time.time }}:{{ time.seconds }}</div>
   <div v-if="!pending && time">{{ time.date }}</div>
   <div v-else>loading...</div>
+  <div>User</div>
+  <div>{{ user?.name ?? "no name" }}</div>
 </template>
 <script setup lang="ts">
 const { data: time, pending } = await useAsyncData<{
@@ -15,4 +17,8 @@ const { data: time, pending } = await useAsyncData<{
     {}
   )
 );
+
+const { data: user } = await useAsyncData<{
+  name: string;
+}>("user", () => $fetch("https://apimocha.com/hybrid-rendering/users", {}));
 </script>
