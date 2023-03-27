@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     "/cache-swr/**": { cache: { maxAge: 1, swr: true } },
     "/swr/**": { swr: 1 * 60 },
     "/swr-long/**": { swr: 1 * 60 * 10 },
-    "/swr-short/**": { swr: 1 * 5 },
+    "/swr-short/**": { swr: 1 * 3 },
     "/universal/**": {}, // default
     "/redirect/from": { redirect: { to: "redirect/to", statusCode: 302 } }, // Doesn't work: redirects to /redirect/redirect/to
     "/redirect-from": { redirect: { to: "redirect/to", statusCode: 302 } }, // works
