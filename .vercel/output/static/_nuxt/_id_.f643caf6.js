@@ -1,0 +1,1 @@
+import{_ as a}from"./Fetch.vue.ca2f948d.js";import{a as t,b as n,f as o,t as s,e as c,F as _,o as d}from"./entry.140a9843.js";const i={};function m(e,f){const r=a;return d(),n(_,null,[o("div",null,"Prerender Render Id: "+s(e.$route.params.id),1),c(r)],64)}const u=t(i,[["render",m]]);export{u as default};

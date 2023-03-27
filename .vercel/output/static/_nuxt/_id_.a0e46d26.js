@@ -1,0 +1,1 @@
+import{_ as t}from"./Fetch.vue.ca2f948d.js";import{a as o,b as r,f as n,t as s,e as c,F as _,o as i}from"./entry.140a9843.js";const d={};function m(e,f){const a=t;return i(),r(_,null,[n("div",null,"Static Render Id: "+s(e.$route.params.id),1),c(a)],64)}const u=o(d,[["render",m]]);export{u as default};

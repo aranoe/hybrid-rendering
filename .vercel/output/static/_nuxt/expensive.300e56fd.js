@@ -1,0 +1,1 @@
+import{_ as n}from"./Expensive.vue.8641565b.js";import{a as s,b as o,e as t,F as a,f as c,o as r}from"./entry.140a9843.js";const _={},i=c("div",null,"UNIVERSAL Expensive",-1);function f(m,p){const e=n;return r(),o(a,null,[i,t(e)],64)}const x=s(_,[["render",f]]);export{x as default};

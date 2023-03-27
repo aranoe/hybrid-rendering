@@ -20,5 +20,5 @@ function createRandomUser() {
   };
 }
 
-const users = Array.from({ length: 50000 }).map(() => createRandomUser());
+const users = Array.from({ length: 25000 }).map(() => createRandomUser());
 </script>
