@@ -4,7 +4,7 @@ export default defineNuxtConfig({
     preset: "vercel-edge",
     prerender: {
       crawlLinks: true,
-      routes: ["/prerender/1", "/prerender/fetch", "/prerender/expensive"],
+      routes: ["/prerender/1", "/prerender/fetch"],
     },
   },
   routeRules: {
@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     "/static/**": { static: true },
     "/swr/**": { swr: 1 * 60 },
     "/swr-long/**": { swr: 10 * 60 },
+    "/swr-short/**": { swr: 1 },
     "/universal/**": {}, // default
   },
 });
