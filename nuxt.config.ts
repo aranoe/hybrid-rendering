@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     "/static": { static: true },
     "/static-render/**": { static: true },
     "/swr": { swr: 1 * 60 },
+    "/swr-long": { swr: 10 * 60 },
     "/universal": {}, // default
   },
 });
