@@ -14,5 +14,6 @@ export default defineNuxtConfig({
     "/swr-long/**": { swr: 10 * 60 },
     "/swr-short/**": { swr: 1 * 5 },
     "/universal/**": {}, // default
+    "/redirect/from": { redirect: { to: "redirect/to", statusCode: 302 } },
   },
 });
