@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     // "/csr/**": { ssr: false },
     // "/static/**": { static: true }, // Doesn't work at all
 
-    "/swr/**": { swr: 5 },
+    "/swr/**": { swr: 1 },
 
     // "/universal/**": {}, // default
     // "/redirect/from": { redirect: { to: "redirect/to", statusCode: 302 } }, // Doesn't work: redirects to /redirect/redirect/to
