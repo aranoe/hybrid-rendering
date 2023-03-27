@@ -1,1 +1,0 @@
-import{_ as n}from"./Expensive.vue.8641565b.js";import{a as s,b as o,e as r,F as t,f as a,o as c}from"./entry.140a9843.js";const _={},i=a("div",null,"Prerender Render Expensive",-1);function d(f,m){const e=n;return c(),o(t,null,[i,r(e)],64)}const x=s(_,[["render",d]]);export{x as default};
