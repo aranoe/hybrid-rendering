@@ -11,10 +11,10 @@ export default defineNuxtConfig({
     "/csr/**": { ssr: false },
     "/static/**": { static: true },
     "/cache/**": { cache: { maxAge: 1 } },
+    "/cache-swr/**": { cache: { maxAge: 10, swr: true } },
 
     "/swr/**": { swr: 1 * 5 },
-    "/swr-long/**": { swr: 1 * 5 },
-    "/swr-short/**": { swr: 1 * 5 },
+
     "/universal/**": {}, // default
     "/redirect/from": { redirect: { to: "redirect/to", statusCode: 302 } }, // Doesn't work: redirects to /redirect/redirect/to
     "/redirect-from": { redirect: { to: "redirect/to", statusCode: 302 } }, // works
