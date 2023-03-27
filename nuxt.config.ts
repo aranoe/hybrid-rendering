@@ -10,6 +10,8 @@ export default defineNuxtConfig({
   routeRules: {
     "/csr/**": { ssr: false },
     "/static/**": { static: true },
+    "/cache/**": { cache: { maxAge: 1 } },
+
     "/swr/**": { swr: 1 * 5 },
     "/swr-long/**": { swr: 1 * 5 },
     "/swr-short/**": { swr: 1 * 5 },
