@@ -1,4 +1,4 @@
 <template>
   <div>SWR</div>
-  <FetchedContent />
+  <Fetch />
 </template>
