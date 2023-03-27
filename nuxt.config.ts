@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     "/static/**": { static: true },
     "/swr/**": { swr: 1 * 60 },
     "/swr-long/**": { swr: 10 * 60 },
-    "/swr-short/**": { swr: 1 },
+    "/swr-short/**": { swr: 1 * 5 },
     "/universal/**": {}, // default
   },
 });
