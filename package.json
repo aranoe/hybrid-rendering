@@ -11,8 +11,6 @@
     "nuxt": "^3.3.1"
   },
   "dependencies": {
-    "@faker-js/faker": "^7.6.0",
-    "@pinia/nuxt": "^0.4.7",
-    "pinia": "^2.0.33"
+    "@faker-js/faker": "^7.6.0"
   }
 }

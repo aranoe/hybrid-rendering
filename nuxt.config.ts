@@ -7,7 +7,6 @@ export default defineNuxtConfig({
       routes: ["/prerender/1", "/prerender/fetch", "/prerender/expensive"],
     },
   },
-  modules: ["@pinia/nuxt"],
   routeRules: {
     "/csr/**": { ssr: false },
     "/static/**": { static: true },
