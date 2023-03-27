@@ -10,7 +10,5 @@
   "devDependencies": {
     "nuxt": "^3.3.1"
   },
-  "dependencies": {
-    "@faker-js/faker": "^7.6.0"
-  }
+  "dependencies": {}
 }
