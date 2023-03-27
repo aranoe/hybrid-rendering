@@ -6,6 +6,13 @@ export default defineNuxtConfig({
       crawlLinks: true,
       routes: ["/prerender/1", "/prerender/fetch"],
     },
+    devProxy: {
+      "/picsum/**": {
+        target: "https://picsum.photos/**",
+        changeOrigin: true,
+        prependPath: true,
+      },
+    },
   },
   routeRules: {
     "/csr/**": { ssr: false },
@@ -14,6 +21,8 @@ export default defineNuxtConfig({
     "/swr-long/**": { swr: 10 * 60 },
     "/swr-short/**": { swr: 1 * 5 },
     "/universal/**": {}, // default
-    "/redirect/from": { redirect: { to: "redirect/to", statusCode: 302 } },
+    "/redirect/from": { redirect: { to: "redirect/to", statusCode: 302 } }, // Doesn't work: redirects to /redirect/redirect/to
+    "/redirect-from": { redirect: { to: "redirect/to", statusCode: 302 } }, // works
+    "/picsum/**": { proxy: { to: "https://picsum.photos/**" } }, // doesn't seem to work
   },
 });
