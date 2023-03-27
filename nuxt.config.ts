@@ -9,11 +9,9 @@ export default defineNuxtConfig({
   },
   routeRules: {
     "/csr/**": { ssr: false },
-    "/static/**": { static: true },
-    "/cache/**": { cache: { maxAge: 1 } },
-    "/cache-swr/**": { cache: { maxAge: 10, swr: true } },
+    "/static/**": { static: true }, // Doesn't work at all
 
-    "/swr/**": { swr: 1 * 5 },
+    "/swr/**": { swr: 5 },
 
     "/universal/**": {}, // default
     "/redirect/from": { redirect: { to: "redirect/to", statusCode: 302 } }, // Doesn't work: redirects to /redirect/redirect/to
