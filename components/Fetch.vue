@@ -1,7 +1,7 @@
 <template>
   <div style="font-family: sans-serif">
     <div v-if="!pending && time">
-      {{ time.time }}:{{ time.seconds }}
+      {{ new Date(time.dateTime).toLocaleString() }}
       <span style="color: black; opacity: 0.7"> (build time)</span>
     </div>
     <div v-else>loading...</div>
@@ -19,16 +19,8 @@
   </div>
 </template>
 <script setup lang="ts">
-const getDateFormatted = () => {
-  const date = new Date();
-  const seconds = date.getSeconds().toString();
-  return `${date.getHours()}:${date.getMinutes()}:${
-    seconds.length > 1 ? seconds : "0" + seconds
-  }`;
-};
-
 let interval: any;
-const initalTime = getDateFormatted();
+const initalTime = new Date().toLocaleString();
 const currentTime = ref(initalTime);
 const { data: user } = await useAsyncData<{
   name: string;
@@ -36,7 +28,7 @@ const { data: user } = await useAsyncData<{
 
 const { data: time, pending } = await useAsyncData<{
   time: string;
-  date: string;
+  dateTime: string;
   seconds: string;
 }>("time", () =>
   $fetch(
@@ -47,7 +39,7 @@ const { data: time, pending } = await useAsyncData<{
 
 onMounted(() => {
   interval = setInterval(() => {
-    currentTime.value = getDateFormatted();
+    currentTime.value = new Date().toLocaleString();
   }, 500);
 });
 
